@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import App, { VisibleTodoList } from './App';
+import App from './components/App';
+import rootReducer from './reducers'
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(VisibleTodoList);
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <Provider store={store}>
